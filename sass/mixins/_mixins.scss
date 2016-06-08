@@ -1,0 +1,16 @@
+@mixin backgroundGradientLeft2Right($colors...) {
+  background-color: $colors;
+  background: -webkit-linear-gradient(left, $colors);
+  background: -o-linear-gradient(right, $colors);
+  background: -moz-linear-gradient(right, $colors);
+  background: linear-gradient(to right, $colors);
+}
+
+@mixin backgroundGradientLeft2RightWithImage($image, $colors...) {
+  background-color: $colors;
+  background: -webkit-linear-gradient(left, $colors), $image;
+  background: -o-linear-gradient(right, $colors), $image;
+  background: -moz-linear-gradient(right, $colors), $image;
+  background: linear-gradient(to right, $colors), $image;
+  background-blend-mode: screen;
+}
