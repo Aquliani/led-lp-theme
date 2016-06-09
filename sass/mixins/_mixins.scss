@@ -14,3 +14,19 @@
   background: linear-gradient(to right, $colors), $image;
   background-blend-mode: screen;
 }
+
+@mixin backgroundColorWithImage($image, $color) {
+  background-color: $color;
+  background-image: $image;
+  background-blend-mode: screen;
+}
+
+@mixin backgroundGradientRadial($color1, $color2) {
+  background: $color1; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient($color2, $color1 70%); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient($color2, $color1 70%); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient($color2, $color1 70%); /* For Firefox 3.6 to 15 */
+  background: radial-gradient($color2, $color1 70%); /* Standard syntax */
+  background-blend-mode: overlay;
+}
+

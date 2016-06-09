@@ -11,6 +11,8 @@
 
 ?>
 
+<footer></footer>
+
 <?php wp_footer(); ?>
 
 <script type="application/javascript" src="<?php bloginfo('template_directory'); ?>/src/js/jquery-2.2.0.min.js"></script>

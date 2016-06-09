@@ -7,3 +7,23 @@
 
 //HEADER
 @import "header/header";
+
+//FOOTER
+@import "footer/footer";
+
+body{
+  @include backgroundColorWithImage(url("src/images/twinkle_twinkle.png"), $color7);
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    border-radius: 100%;
+    @include backgroundGradientRadial(transparent, hsla(0, 0%, 100%, 0.15));
+  }
+}
