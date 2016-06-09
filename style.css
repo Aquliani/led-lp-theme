@@ -40,12 +40,13 @@ body {
     border-radius: 100%;
     background: transparent;
     /* For browsers that do not support gradients */
-    background: -webkit-radial-gradient(rgba(255, 255, 255, 0.15), transparent 70%);
+    background: -webkit-radial-gradient(white, transparent 70%);
     /* Safari 5.1 to 6.0 */
-    background: -o-radial-gradient(rgba(255, 255, 255, 0.15), transparent 70%);
+    background: -o-radial-gradient(white, transparent 70%);
     /* For Opera 11.6 to 12.0 */
-    background: -moz-radial-gradient(rgba(255, 255, 255, 0.15), transparent 70%);
+    background: -moz-radial-gradient(white, transparent 70%);
     /* For Firefox 3.6 to 15 */
-    background: radial-gradient(rgba(255, 255, 255, 0.15), transparent 70%);
+    background: radial-gradient(white, transparent 70%);
     /* Standard syntax */
-    background-blend-mode: overlay; }
+    background-blend-mode: overlay;
+    mix-blend-mode: overlay; }

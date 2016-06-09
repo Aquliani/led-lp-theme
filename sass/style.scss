@@ -24,6 +24,7 @@ body{
     -webkit-border-radius:100%;
     -moz-border-radius:100%;
     border-radius: 100%;
-    @include backgroundGradientRadial(transparent, hsla(0, 0%, 100%, 0.15));
+    @include backgroundGradientRadial(transparent, white);
+    mix-blend-mode: overlay;
   }
 }
