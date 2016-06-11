@@ -1,4 +1,4 @@
-footer {
+footer.main-page {
   width: 100%;
   height: $footer-height;
   @include backgroundGradientLeft2RightWithImage(url('src/images/subtle_carbon.png'), $header-color1, $header-color2, $header-color1);

@@ -11,7 +11,7 @@
 
 ?>
 
-<footer></footer>
+<footer class="main-page"></footer>
 
 <?php wp_footer(); ?>
 
