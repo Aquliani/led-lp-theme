@@ -49,4 +49,16 @@ body {
     background: radial-gradient(white, transparent 70%);
     /* Standard syntax */
     background-blend-mode: overlay;
-    mix-blend-mode: overlay; }
+    mix-blend-mode: overlay;
+    z-index: -1; }
+
+section.led-lights-logo {
+  position: relative;
+  margin-top: 100px; }
+  section.led-lights-logo .logo {
+    position: absolute;
+    width: 100%; }
+  section.led-lights-logo .strokes {
+    position: absolute;
+    top: -50px;
+    width: 75%; }

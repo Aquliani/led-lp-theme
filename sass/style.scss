@@ -26,5 +26,22 @@ body{
     border-radius: 100%;
     @include backgroundGradientRadial(transparent, white);
     mix-blend-mode: overlay;
+    z-index: -1;
+  }
+}
+
+section.led-lights-logo{
+  position: relative;
+  margin-top: 100px;
+
+  .logo{
+    position: absolute;
+    width: 100%;
+  }
+
+  .strokes{
+    position: absolute;
+    top: -50px;
+    width: 75%;
   }
 }

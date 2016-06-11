@@ -1,3 +1,7 @@
-/**
- * Created by Serik on 6/8/2016.
- */
+$(function(){
+
+    var $window = $(window);
+    // set up dimensions
+    var sectionLedLightsLogo = $('section.led-lights-logo');
+    sectionLedLightsLogo.css('margin-top', (($window.height() / 2) - (sectionLedLightsLogo.parent().height() / 2) - 50));
+});
