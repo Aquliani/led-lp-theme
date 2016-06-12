@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="container-fluid news-blog-article">
+    <div class="container-fluid ski-fi-body">
         <!--        ARTICLE HEADER-->
         <div class="row">
             <div class="col-sm-12">

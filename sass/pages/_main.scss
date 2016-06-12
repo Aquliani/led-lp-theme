@@ -1,0 +1,105 @@
+section.led-lights-logo{
+  position: relative;
+  margin-top: 100px;
+
+  .logo{
+    position: absolute;
+    width: 100%;
+  }
+
+  .strokes{
+    position: absolute;
+    top: -50px;
+    width: 75%;
+  }
+}
+
+section.social-circle{
+
+  article{
+    position: relative;
+  }
+
+  .social-button{
+    width: 40px;
+    height: 40px;
+    background-color: $color6;
+    border-radius: 20px;
+    color: $color4;
+    @include displayAsTable;
+
+    -webkit-transition: box-shadow 1s, background-color 1s, color 1s; /* Safari */
+    transition: box-shadow 1s, background-color 1s, color 1s;
+
+    i.fa{
+      @include displayAsTableCell;
+    }
+
+    &:hover{
+      box-shadow: 0 0 rgba(255,255,255,0.35);
+      background-color: lighten($color6, 10);
+      color: darken($color4, 10);
+    }
+  }
+
+  .social-button-vk{
+    position: absolute;
+    top: 25%;
+    right: 20%;
+  }
+  .social-button-gp{
+    position: absolute;
+    top: 41%;
+    right: 12%;
+  }
+  .social-button-yt{
+    position: absolute;
+    top: 58%;
+    right: 19%;
+  }
+  .social-button-fb{
+    position: absolute;
+    top: 68%;
+    right: 34%;
+  }
+}
+
+section.about-frame{
+
+  ul{
+    li{
+      list-style-type: square;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: $deviceWidth1024){
+    margin-top: 30px;
+  }
+}
+
+section.news-blog-logo{
+
+  @media screen and (min-width: $deviceWidth1024){
+    position: absolute;
+    bottom: 55px;
+
+    .ski-fi-title{
+      margin: 0;
+    }
+  }
+}
+
+section.contacts-earth{
+
+  article img{
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  @media screen and (min-width: $deviceWidth1024) {
+    position: relative;
+    top: -70px;
+  }
+}
+

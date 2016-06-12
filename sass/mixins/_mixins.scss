@@ -30,3 +30,12 @@
   background-blend-mode: overlay;
 }
 
+@mixin displayAsTable{
+  display: table;
+}
+
+@mixin displayAsTableCell{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}

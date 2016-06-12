@@ -1,4 +1,4 @@
-header.main-page {
+header.page-border {
   width: 100%;
   height: 35px;
   background-color: #183159, #459bd3, #183159;
@@ -9,9 +9,10 @@ header.main-page {
   background-blend-mode: screen;
   box-shadow: 0px 1px 0 #34658f, 0px 2px 0 #274a75;
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: 100; }
 
-footer.main-page {
+footer.page-border {
   width: 100%;
   height: 35px;
   background-color: #183159, #459bd3, #183159;
@@ -22,7 +23,8 @@ footer.main-page {
   background-blend-mode: screen;
   box-shadow: 0px -1px 0 #34658f, 0px -2px 0 #274a75;
   position: fixed;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 100; }
 
 body {
   color: #d5dce6;
@@ -62,10 +64,13 @@ body {
       color: white;
       text-decoration: underline;
       text-shadow: 0 0 2px rgba(255, 255, 255, 0.35); }
+    body a:visited {
+      color: white; }
 
 .ski-fi-title {
   color: #a8d5ef;
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.35); }
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.35);
+  margin-bottom: 2em; }
   .ski-fi-title hr {
     border-color: #a8d5ef;
     position: relative; }
@@ -86,6 +91,14 @@ body {
       right: 1px;
       background-color: #a8d5ef; }
 
+.ski-fi-body {
+  background-color: rgba(68, 117, 159, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.35);
+  padding-bottom: 10px;
+  margin: 10px 0 20px 0;
+  border: 1px solid rgba(213, 220, 230, 0.15); }
+
 section.led-lights-logo {
   position: relative;
   margin-top: 100px; }
@@ -97,16 +110,79 @@ section.led-lights-logo {
     top: -50px;
     width: 75%; }
 
-section.news-blog-logo {
-  margin-top: 100px; }
-  section.news-blog-logo div.news-blog {
-    margin-top: 100px; }
+section.social-circle article {
+  position: relative; }
+section.social-circle .social-button {
+  width: 40px;
+  height: 40px;
+  background-color: #a8d5ef;
+  border-radius: 20px;
+  color: #44759f;
+  display: table;
+  -webkit-transition: box-shadow 1s, background-color 1s, color 1s;
+  /* Safari */
+  transition: box-shadow 1s, background-color 1s, color 1s; }
+  section.social-circle .social-button i.fa {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+  section.social-circle .social-button:hover {
+    box-shadow: 0 0 rgba(255, 255, 255, 0.35);
+    background-color: #d3eaf7;
+    color: #355b7b; }
+section.social-circle .social-button-vk {
+  position: absolute;
+  top: 25%;
+  right: 20%; }
+section.social-circle .social-button-gp {
+  position: absolute;
+  top: 41%;
+  right: 12%; }
+section.social-circle .social-button-yt {
+  position: absolute;
+  top: 58%;
+  right: 19%; }
+section.social-circle .social-button-fb {
+  position: absolute;
+  top: 68%;
+  right: 34%; }
+
+section.about-frame ul li {
+  list-style-type: square;
+  text-transform: uppercase; }
+@media screen and (min-width: 1024px) {
+  section.about-frame {
+    margin-top: 30px; } }
+
+@media screen and (min-width: 1024px) {
+  section.news-blog-logo {
+    position: absolute;
+    bottom: 55px; }
+    section.news-blog-logo .ski-fi-title {
+      margin: 0; } }
+
+section.contacts-earth article img {
+  width: 100%;
+  opacity: 0.9; }
+@media screen and (min-width: 1024px) {
+  section.contacts-earth {
+    position: relative;
+    top: -70px; } }
+
+header.page-border ul.nav.nav-pills a {
+  color: #d5dce6;
+  padding: 7px 15px;
+  -webkit-transition: color 1s, background-color 1s;
+  -moz-transition: color 1s, background-color 1s;
+  -ms-transition: color 1s, background-color 1s;
+  -o-transition: color 1s, background-color 1s;
+  transition: color 1s, background-color 1s; }
+  header.page-border ul.nav.nav-pills a:hover {
+    color: #a8d5ef;
+    background-color: rgba(255, 255, 255, 0.15); }
 
 section.news-blog {
   padding-top: 2.5em; }
-  section.news-blog .news-blog-article {
-    background-color: #44759f;
-    border-radius: 10px;
-    box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.35);
-    padding-bottom: 10px;
-    margin: 10px 0 20px 0; }
+
+section.about .ski-fi-body {
+  padding: 15px; }

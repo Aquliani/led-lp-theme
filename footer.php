@@ -11,7 +11,7 @@
 
 ?>
 
-<footer class="main-page"></footer>
+<footer class="page-border page-border-bottom"></footer>
 
 <?php wp_footer(); ?>
 

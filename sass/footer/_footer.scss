@@ -1,8 +1,9 @@
-footer.main-page {
+footer.page-border {
   width: 100%;
   height: $footer-height;
   @include backgroundGradientLeft2RightWithImage(url('src/images/subtle_carbon.png'), $header-color1, $header-color2, $header-color1);
   box-shadow: 0px -1px 0 $color5, 0px -2px 0 $color2;
   position: fixed;
   bottom: 0;
+  z-index: 100;
 }

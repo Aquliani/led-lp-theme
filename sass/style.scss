@@ -1,31 +1,27 @@
-
 //VARIABLES
 @import "variables/variables";
-
 //MIXINS
 @import "mixins/mixins";
-
 //HEADER
 @import "header/header";
-
 //FOOTER
 @import "footer/footer";
 
-body{
+body {
   color: $color9;
   font-family: Verdana, Geneva, sans-serif;
   @include backgroundColorWithImage(url("src/images/twinkle_twinkle.png"), $color7);
   padding-top: $header-height;
 
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    -webkit-border-radius:100%;
-    -moz-border-radius:100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
     border-radius: 100%;
     @include backgroundGradientRadial(transparent, white);
     mix-blend-mode: overlay;
@@ -36,26 +32,28 @@ body{
     font-family: "Courier New", Courier, monospace;
   }
 
-  a{
+  a {
     color: white;
-    &:hover{
+    &:hover {
       color: white;
       text-decoration: underline;
-      text-shadow: 0 0 2px rgba(255,255,255,0.35);
+      text-shadow: 0 0 2px rgba(255, 255, 255, 0.35);
+    }
+    &:visited {
+      color: white;
     }
   }
 }
 
-
-
-.ski-fi-title{
+.ski-fi-title {
   color: $color6;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.35);
+  margin-bottom: 2em;
 
-  hr{
+  hr {
     border-color: $color6;
     position: relative;
-    &:before{
+    &:before {
       content: " ";
       position: absolute;
       width: 2px;
@@ -64,7 +62,7 @@ body{
       left: -1px;
       background-color: $color6;
     }
-    &:after{
+    &:after {
       content: ' ';
       position: absolute;
       width: 2px;
@@ -76,38 +74,20 @@ body{
   }
 }
 
-section.led-lights-logo{
-  position: relative;
-  margin-top: 100px;
-
-  .logo{
-    position: absolute;
-    width: 100%;
-  }
-
-  .strokes{
-    position: absolute;
-    top: -50px;
-    width: 75%;
-  }
+.ski-fi-body {
+  background-color: rgba($color4, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.35);
+  padding-bottom: 10px;
+  margin: 10px 0 20px 0;
+  border: 1px solid rgba($color9, 0.15);
 }
 
-section.news-blog-logo{
-  margin-top: 100px;
+//MAIN PAGE
+@import "pages/main";
 
-  div.news-blog {
-    margin-top: 100px;
-  }
-}
+//NEWS BLOG PAGE
+@import "pages/news-blog";
 
-section.news-blog{
-  padding-top: 2.5em;
-
-  .news-blog-article{
-    background-color: $color4;
-    border-radius: 10px;
-    box-shadow: 0 0 8px 0 rgba(255,255,255, 0.35);
-    padding-bottom: 10px;
-    margin: 10px 0 20px 0;
-  }
-}
+//ABOUT
+@import "pages/about";

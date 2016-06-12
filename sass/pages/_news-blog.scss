@@ -1,0 +1,23 @@
+header.page-border{
+  ul.nav.nav-pills{
+
+    a{
+      color: $color9;
+      padding: 7px 15px;
+      -webkit-transition: color 1s, background-color 1s;
+      -moz-transition: color 1s, background-color 1s;
+      -ms-transition: color 1s, background-color 1s;
+      -o-transition: color 1s, background-color 1s;
+      transition: color 1s, background-color 1s;
+
+      &:hover{
+        color: $color6;
+        background-color: rgba(255,255,255, 0.15);
+      }
+    }
+  }
+}
+
+section.news-blog{
+  padding-top: 2.5em;
+}

@@ -32,5 +32,24 @@
 
 <body <?php body_class(); ?>>
 
-<header class="main-page"></header>
+<header class="page-border page-border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 text-center">
+                <?php
+                if (is_home()) {
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'container' => 'nav',
+                        'menu_class' => 'nav nav-pills'
+                    ));
+                }
+                ?>
+            </div>
+            <!-- /.col-sm-6 col-sm-offset-3 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</header>
 

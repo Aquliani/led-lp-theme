@@ -12,58 +12,45 @@ get_header(); ?>
             <div class="container">
                 <!--                FIRST ROW - SOCIAL - LOGO - BUY-->
                 <div class="row">
-                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <?php require_once "include/front-page/social-circle.inc.php"; ?>
+                    </div>
                     <!-- /.col-sm-3 -->
                     <div class="col-sm-6">
-                        <section class="led-lights-logo">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="strokes">
-                                        <?= file_get_contents(get_bloginfo('template_directory') . '/src/images/LED_lights_logo_strokes.svg') ?>
-                                    </div>
-                                    <!-- /.led-strokes -->
-                                    <div class="logo">
-                                        <?= file_get_contents(get_bloginfo('template_directory') . '/src/images/LED_lights_logo.svg'); ?>
-                                    </div>
-                                    <!-- /.led-lights -->
-                                </div>
-                                <!-- /.row -->
-                            </div>
-                            <!-- /.container-fluid -->
-                        </section>
+                        <?php require_once "include/front-page/led-lights-logo.inc.php"; ?>
                     </div>
                     <!-- /.col-sm-6 -->
-                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <?php require_once "include/front-page/buy-cart.inc.php"; ?>
+                    </div>
                     <!-- /.col-sm-3 -->
                 </div>
                 <!-- /.row -->
 
                 <!--                SECOND ROW - ABOUT - NEWS BLOG - CONTACTS-->
                 <div class="row">
-                    <div class="col-sm-3"></div>
+                    <div class="col-sm-5">
+                        <?php require_once 'include/front-page/about-frame.inc.php'; ?>
+                    </div>
                     <!-- /.col-sm-3 -->
-                    <div class="col-sm-6">
-                        <section class="news-blog-logo">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="news-blog">
-                                            <a href="<?= $mainMenu[1]->url; ?>">New New New New New New New New New New New New</a>
-                                        </div>
-                                        <!-- /.news-blog -->
-                                    </div>
-                                    <!-- /.col-sm-12 -->
-                                </div>
-                                <!-- /.row -->
-                            </div>
-                            <!-- /.container-fluid -->
-                        </section>
-                        <!-- /.news-blog-logo -->
+                    <div class="col-sm-4">
+                        <?php require_once "include/front-page/news-blog.inc.php"; ?>
                     </div>
                     <!-- /.col-sm-6 -->
-                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3">
+                        <?php require_once "include/front-page/contacts-earth.inc.php"; ?>
+                    </div>
                     <!-- /.col-sm-3 -->
                 </div>
+                <!-- /.row -->
+                
+<!--                ABOUT US SECTION-->
+                <dvi class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <?php require_once "include/about-page/about-section.inc.php"; ?>
+                    </div>
+                    <!-- /.col-sm-8 col-sm-2 -->
+                </dvi>
                 <!-- /.row -->
             </div>
             <!-- /.container -->
