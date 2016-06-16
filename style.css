@@ -29,13 +29,13 @@ footer.page-border {
 body {
   color: #d5dce6;
   font-family: Verdana, Geneva, sans-serif;
-  background-color: #0f2e52;
-  background-image: url("src/images/twinkle_twinkle.png");
-  background-blend-mode: screen;
-  padding-top: 35px; }
+  background: url("src/images/twinkle_twinkle.png"), url("src/images/stars.png"), #0f2e52;
+  background-blend-mode: screen, normal;
+  padding-top: 35px;
+  padding-bottom: 35px; }
   body:after {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -67,14 +67,17 @@ body {
     body a:visited {
       color: white; }
 
-.ski-fi-title {
+.sci-fi-title {
   color: #a8d5ef;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.35);
-  margin-bottom: 2em; }
-  .ski-fi-title hr {
+  padding-bottom: 2em;
+  background-image: url("src/images/sci-fi-back.png");
+  background-position-y: -10px; }
+  .sci-fi-title hr {
     border-color: #a8d5ef;
-    position: relative; }
-    .ski-fi-title hr:before {
+    position: relative;
+    margin: 0; }
+    .sci-fi-title hr:before {
       content: " ";
       position: absolute;
       width: 2px;
@@ -82,7 +85,7 @@ body {
       top: -2px;
       left: -1px;
       background-color: #a8d5ef; }
-    .ski-fi-title hr:after {
+    .sci-fi-title hr:after {
       content: ' ';
       position: absolute;
       width: 2px;
@@ -91,83 +94,593 @@ body {
       right: 1px;
       background-color: #a8d5ef; }
 
-.ski-fi-body {
+.sci-fi-body {
   background-color: rgba(68, 117, 159, 0.5);
   border-radius: 5px;
   box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(213, 220, 230, 0.15);
   padding-bottom: 10px;
-  margin: 10px 0 20px 0;
-  border: 1px solid rgba(213, 220, 230, 0.15); }
+  margin: 10px 0 20px 0; }
 
-section.led-lights-logo {
-  position: relative;
-  margin-top: 100px; }
-  section.led-lights-logo .logo {
+section.front {
+  margin-bottom: 40px; }
+  section.front section.social-circle #social-circle {
+    width: 100%;
+    height: 100%; }
+@keyframes social-circle-outer-dots {
+  0% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Safari */
+    transform: scale(1, 1); }
+  25% {
+    -ms-transform: scale(1.1, 1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1, 1.1);
+    /* Safari */
+    transform: scale(1.1, 1.1); }
+  75% {
+    -ms-transform: scale(0.9, 0.9);
+    /* IE 9 */
+    -webkit-transform: scale(0.9, 0.9);
+    /* Safari */
+    transform: scale(0.9, 0.9); }
+  100% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: scale(1, 1);
+    /* Safari */
+    transform: scale(1, 1); } }
+    section.front section.social-circle #social-circle #social-circle-outer-dots {
+      -webkit-animation-name: social-circle-outer-dots;
+      -moz-animation-name: social-circle-outer-dots;
+      -o-animation-name: social-circle-outer-dots;
+      animation-name: social-circle-outer-dots;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-duration: 6s;
+      -moz-animation-duration: 6s;
+      -o-animation-duration: 6s;
+      animation-duration: 6s;
+      -webkit-transform-origin: 50% 50%;
+      -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      -o-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-animation-timing-function: ease-in-out;
+      -moz-animation-timing-function: ease-in-out;
+      -o-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out; }
+@keyframes social-circle-inner-dots {
+  from {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Safari */
+    transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Safari */
+    transform: rotate(45deg); } }
+    section.front section.social-circle #social-circle #social-circle-inner-dots {
+      -webkit-animation-name: social-circle-inner-dots;
+      -moz-animation-name: social-circle-inner-dots;
+      -o-animation-name: social-circle-inner-dots;
+      animation-name: social-circle-inner-dots;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-duration: 6s;
+      -moz-animation-duration: 6s;
+      -o-animation-duration: 6s;
+      animation-duration: 6s;
+      -webkit-transform-origin: 50% 50%;
+      -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      -o-transform-origin: 50% 50%;
+      transform-origin: 50% 50%; }
+@keyframes social-circle-outer-circle {
+  0% {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Safari */
+    transform: rotate(0deg);
+    fill: #a8d5ef; }
+  15% {
+    -ms-transform: rotate(7deg);
+    /* IE 9 */
+    -webkit-transform: rotate(7deg);
+    /* Safari */
+    transform: rotate(7deg);
+    fill: white; }
+  25% {
+    -ms-transform: rotate(5deg);
+    /* IE 9 */
+    -webkit-transform: rotate(5deg);
+    /* Safari */
+    transform: rotate(5deg);
+    fill: #a8d5ef; }
+  40% {
+    -ms-transform: rotate(10deg);
+    /* IE 9 */
+    -webkit-transform: rotate(10deg);
+    /* Safari */
+    transform: rotate(10deg);
+    fill: white; }
+  60% {
+    -ms-transform: rotate(5deg);
+    /* IE 9 */
+    -webkit-transform: rotate(5deg);
+    /* Safari */
+    transform: rotate(5deg);
+    fill: #a8d5ef; }
+  70% {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Safari */
+    transform: rotate(0deg);
+    fill: #a8d5ef; }
+  85% {
+    -ms-transform: rotate(7deg);
+    /* IE 9 */
+    -webkit-transform: rotate(7deg);
+    /* Safari */
+    transform: rotate(7deg);
+    fill: white; }
+  100% {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Safari */
+    transform: rotate(0deg);
+    fill: #a8d5ef; } }
+    section.front section.social-circle #social-circle #social-circle-outer-circle #CircleRects {
+      -webkit-animation-name: social-circle-outer-circle;
+      -moz-animation-name: social-circle-outer-circle;
+      -o-animation-name: social-circle-outer-circle;
+      animation-name: social-circle-outer-circle;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-duration: 6s;
+      -moz-animation-duration: 6s;
+      -o-animation-duration: 6s;
+      animation-duration: 6s;
+      -webkit-transform-origin: 50% 50%;
+      -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      -o-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+      -webkit-animation-direction: alternate;
+      -moz-animation-direction: alternate;
+      -o-animation-direction: alternate;
+      animation-direction: alternate; }
+    section.front section.social-circle #social-circle:hover #social-circle-outer-circle #CircleRects, section.front section.social-circle #social-circle.hover #social-circle-outer-circle #CircleRects {
+      -webkit-animation-play-state: running;
+      -moz-animation-play-state: running;
+      -o-animation-play-state: running;
+      animation-play-state: running; }
+@keyframes social-circle-inner-circle {
+  0% {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Safari */
+    transform: rotate(0deg);
+    fill: #a8d5ef; }
+  25% {
+    -ms-transform: rotate(10deg);
+    /* IE 9 */
+    -webkit-transform: rotate(10deg);
+    /* Safari */
+    transform: rotate(10deg);
+    fill: white; }
+  75% {
+    -ms-transform: rotate(-10deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-10deg);
+    /* Safari */
+    transform: rotate(-10deg);
+    fill: white; }
+  100% {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    -webkit-transform: rotate(0deg);
+    /* Safari */
+    transform: rotate(0deg);
+    fill: #a8d5ef; } }
+    section.front section.social-circle #social-circle #social-circle-inner-circle {
+      -webkit-animation-name: social-circle-inner-circle;
+      -moz-animation-name: social-circle-inner-circle;
+      -o-animation-name: social-circle-inner-circle;
+      animation-name: social-circle-inner-circle;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-duration: 6s;
+      -moz-animation-duration: 6s;
+      -o-animation-duration: 6s;
+      animation-duration: 6s;
+      -webkit-transform-origin: 50% 50%;
+      -moz-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+      -o-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+      -webkit-animation-direction: alternate;
+      -moz-animation-direction: alternate;
+      -o-animation-direction: alternate;
+      animation-direction: alternate; }
+    section.front section.social-circle #social-circle:hover #social-circle-inner-circle, section.front section.social-circle #social-circle.hover #social-circle-inner-circle {
+      -webkit-animation-play-state: running;
+      -moz-animation-play-state: running;
+      -o-animation-play-state: running;
+      animation-play-state: running; }
+  section.front section.social-circle article {
+    position: relative; }
+  section.front section.social-circle .social-button {
+    width: 40px;
+    height: 40px;
+    background-color: #a8d5ef;
+    border-radius: 20px;
+    color: #44759f;
+    display: table;
+    -webkit-transition: box-shadow 1s, background-color 1s, color 1s;
+    /* Safari */
+    transition: box-shadow 1s, background-color 1s, color 1s; }
+    section.front section.social-circle .social-button i.fa {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+    section.front section.social-circle .social-button:hover {
+      box-shadow: 0 0 10px #d5dce6;
+      background-color: #d3eaf7;
+      color: #254058; }
+  section.front section.social-circle .social-button-vk {
     position: absolute;
-    width: 100%; }
-  section.led-lights-logo .strokes {
+    top: 25%;
+    right: 20%; }
+  section.front section.social-circle .social-button-gp {
     position: absolute;
-    top: -50px;
-    width: 75%; }
-
-section.social-circle article {
-  position: relative; }
-section.social-circle .social-button {
-  width: 40px;
-  height: 40px;
-  background-color: #a8d5ef;
-  border-radius: 20px;
-  color: #44759f;
-  display: table;
-  -webkit-transition: box-shadow 1s, background-color 1s, color 1s;
-  /* Safari */
-  transition: box-shadow 1s, background-color 1s, color 1s; }
-  section.social-circle .social-button i.fa {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center; }
-  section.social-circle .social-button:hover {
-    box-shadow: 0 0 rgba(255, 255, 255, 0.35);
-    background-color: #d3eaf7;
-    color: #355b7b; }
-section.social-circle .social-button-vk {
-  position: absolute;
-  top: 25%;
-  right: 20%; }
-section.social-circle .social-button-gp {
-  position: absolute;
-  top: 41%;
-  right: 12%; }
-section.social-circle .social-button-yt {
-  position: absolute;
-  top: 58%;
-  right: 19%; }
-section.social-circle .social-button-fb {
-  position: absolute;
-  top: 68%;
-  right: 34%; }
-
-section.about-frame ul li {
-  list-style-type: square;
-  text-transform: uppercase; }
-@media screen and (min-width: 1024px) {
-  section.about-frame {
-    margin-top: 30px; } }
-
-@media screen and (min-width: 1024px) {
-  section.news-blog-logo {
+    top: 41%;
+    right: 12%; }
+  section.front section.social-circle .social-button-yt {
     position: absolute;
-    bottom: 55px; }
-    section.news-blog-logo .ski-fi-title {
-      margin: 0; } }
-
-section.contacts-earth article img {
-  width: 100%;
-  opacity: 0.9; }
-@media screen and (min-width: 1024px) {
-  section.contacts-earth {
+    top: 58%;
+    right: 19%; }
+  section.front section.social-circle .social-button-fb {
+    position: absolute;
+    top: 68%;
+    right: 34%; }
+  section.front section.led-lights-logo {
     position: relative;
-    top: -70px; } }
+    margin-top: 100px; }
+    section.front section.led-lights-logo .logo {
+      position: absolute;
+      width: 100%; }
+    section.front section.led-lights-logo .strokes {
+      position: absolute;
+      top: -50px;
+      width: 75%; }
+@keyframes keyframes-buy-cart-bottom-cube-1 {
+  0% {
+    opacity: 0.5; }
+  25% {
+    opacity: 1; }
+  50% {
+    opacity: 0.75; }
+  75% {
+    opacity: 0.25; }
+  100% {
+    opacity: 0.5; } }
+  section.front section.buy-cart #Buy-cart #Cube1 {
+    -webkit-animation-name: keyframes-buy-cart-bottom-cube-1;
+    -moz-animation-name: keyframes-buy-cart-bottom-cube-1;
+    -o-animation-name: keyframes-buy-cart-bottom-cube-1;
+    animation-name: keyframes-buy-cart-bottom-cube-1;
+    -webkit-animation-duration: 6s;
+    -moz-animation-duration: 6s;
+    -o-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -o-animation-direction: alternate;
+    animation-direction: alternate; }
+@keyframes keyframes-buy-cart-bottom-cube-2 {
+  0% {
+    opacity: 0.75; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 1; }
+  100% {
+    opacity: 0.75; } }
+  section.front section.buy-cart #Buy-cart #Cube2 {
+    -webkit-animation-name: keyframes-buy-cart-bottom-cube-2;
+    -moz-animation-name: keyframes-buy-cart-bottom-cube-2;
+    -o-animation-name: keyframes-buy-cart-bottom-cube-2;
+    animation-name: keyframes-buy-cart-bottom-cube-2;
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+    -o-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -o-animation-direction: alternate;
+    animation-direction: alternate; }
+@keyframes keyframes-buy-cart-bottom-cube-3 {
+  0% {
+    opacity: 0.25; }
+  25% {
+    opacity: 0.5; }
+  50% {
+    opacity: 0.75; }
+  75% {
+    opacity: 1; }
+  100% {
+    opacity: 0.25; } }
+  section.front section.buy-cart #Buy-cart #Cube3 {
+    -webkit-animation-name: keyframes-buy-cart-bottom-cube-3;
+    -moz-animation-name: keyframes-buy-cart-bottom-cube-3;
+    -o-animation-name: keyframes-buy-cart-bottom-cube-3;
+    animation-name: keyframes-buy-cart-bottom-cube-3;
+    -webkit-animation-duration: 7s;
+    -moz-animation-duration: 7s;
+    -o-animation-duration: 7s;
+    animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -o-animation-direction: alternate;
+    animation-direction: alternate; }
+@keyframes keyframes-buy-cart-bottom-cube-4 {
+  0% {
+    opacity: 1; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.25; }
+  100% {
+    opacity: 1; } }
+  section.front section.buy-cart #Buy-cart #Cube4 {
+    -webkit-animation-name: keyframes-buy-cart-bottom-cube-4;
+    -moz-animation-name: keyframes-buy-cart-bottom-cube-4;
+    -o-animation-name: keyframes-buy-cart-bottom-cube-4;
+    animation-name: keyframes-buy-cart-bottom-cube-4;
+    -webkit-animation-duration: 6s;
+    -moz-animation-duration: 6s;
+    -o-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -o-animation-direction: alternate;
+    animation-direction: alternate; }
+@keyframes keyframes-buy-cart-plank-1 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; }
+  15% {
+    -webkit-transform: translate(0, -1px);
+    -moz-transform: translate(0, -1px);
+    -ms-transform: translate(0, -1px);
+    -o-transform: translate(0, -1px);
+    transform: translate(0, -1px);
+    opacity: 0.75; }
+  30% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; } }
+  section.front section.buy-cart #Buy-cart #Plank1 {
+    -webkit-animation-name: keyframes-buy-cart-plank-1;
+    -moz-animation-name: keyframes-buy-cart-plank-1;
+    -o-animation-name: keyframes-buy-cart-plank-1;
+    animation-name: keyframes-buy-cart-plank-1;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused; }
+  section.front section.buy-cart #Buy-cart:hover #Plank1 {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running; }
+@keyframes keyframes-buy-cart-plank-2 {
+  10% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; }
+  25% {
+    -webkit-transform: translate(0, -1px);
+    -moz-transform: translate(0, -1px);
+    -ms-transform: translate(0, -1px);
+    -o-transform: translate(0, -1px);
+    transform: translate(0, -1px);
+    opacity: 0.75; }
+  40% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; } }
+  section.front section.buy-cart #Buy-cart #Plank2 {
+    -webkit-animation-name: keyframes-buy-cart-plank-2;
+    -moz-animation-name: keyframes-buy-cart-plank-2;
+    -o-animation-name: keyframes-buy-cart-plank-2;
+    animation-name: keyframes-buy-cart-plank-2;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused; }
+  section.front section.buy-cart #Buy-cart:hover #Plank2 {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running; }
+@keyframes keyframes-buy-cart-plank-3 {
+  20% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; }
+  35% {
+    -webkit-transform: translate(0, -1px);
+    -moz-transform: translate(0, -1px);
+    -ms-transform: translate(0, -1px);
+    -o-transform: translate(0, -1px);
+    transform: translate(0, -1px);
+    opacity: 0.75; }
+  50% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1; } }
+  section.front section.buy-cart #Buy-cart #Plank3 {
+    -webkit-animation-name: keyframes-buy-cart-plank-3;
+    -moz-animation-name: keyframes-buy-cart-plank-3;
+    -o-animation-name: keyframes-buy-cart-plank-3;
+    animation-name: keyframes-buy-cart-plank-3;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused; }
+  section.front section.buy-cart #Buy-cart:hover #Plank3 {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running; }
+@keyframes keyframes-buy-cart-arrows {
+  from {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  to {
+    -webkit-transform: translate(8%, 0);
+    -moz-transform: translate(8%, 0);
+    -ms-transform: translate(8%, 0);
+    -o-transform: translate(8%, 0);
+    transform: translate(8%, 0); } }
+  section.front section.buy-cart #Buy-cart #Arrows {
+    -webkit-animation-name: keyframes-buy-cart-arrows;
+    -moz-animation-name: keyframes-buy-cart-arrows;
+    -o-animation-name: keyframes-buy-cart-arrows;
+    animation-name: keyframes-buy-cart-arrows;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear; }
+  section.front section.buy-cart #Buy-cart:hover #Arrows {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running; }
+  section.front section.about-frame ul li {
+    list-style-type: square;
+    text-transform: uppercase; }
+  @media screen and (min-width: 1024px) {
+    section.front section.about-frame {
+      margin-top: 30px; } }
+  @media screen and (min-width: 1024px) {
+    section.front section.news-blog-logo {
+      position: absolute;
+      bottom: 55px; }
+      section.front section.news-blog-logo .sci-fi-title {
+        padding-bottom: 10px; } }
+  section.front section.contacts-earth article img {
+    width: 100%;
+    opacity: 0.9; }
+  @media screen and (min-width: 1024px) {
+    section.front section.contacts-earth {
+      position: relative;
+      top: -70px; } }
 
 header.page-border ul.nav.nav-pills a {
   color: #d5dce6;
@@ -184,5 +697,57 @@ header.page-border ul.nav.nav-pills a {
 section.news-blog {
   padding-top: 2.5em; }
 
-section.about .ski-fi-body {
-  padding: 15px; }
+section.contacts {
+  background-image: url("src/images/honeycomb.png");
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(52, 101, 143, 0.15); }
+  section.contacts .sci-fi-title {
+    background: none; }
+  section.contacts .list-group a.list-group-item {
+    background-color: #d5dce6;
+    color: #34658f; }
+    section.contacts .list-group a.list-group-item:hover {
+      background-color: #e5e9f0; }
+      section.contacts .list-group a.list-group-item:hover .fa {
+        color: #427fb4; }
+  section.contacts .list-group h4 {
+    margin-top: 25px; }
+  section.contacts .list-group div.fa-parent {
+    display: table;
+    width: 100%; }
+    section.contacts .list-group div.fa-parent i.fa {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: #34658f; }
+  section.contacts .list-group hr {
+    margin: 0;
+    margin-bottom: 5px;
+    border-color: #34658f; }
+  section.contacts .list-group p {
+    font-size: 0.75em; }
+
+section.buy {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 40px; }
+  section.buy ul li {
+    list-style-type: square; }
+
+section.about {
+  background-color: rgba(213, 220, 230, 0.9);
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: #274a75; }
+  section.about .sci-fi-title {
+    color: #274a75;
+    background: none; }
+    section.about .sci-fi-title hr {
+      border-color: #274a75; }
+  section.about i.fa {
+    margin-top: 35px; }
+  section.about div.height {
+    height: 50px; }

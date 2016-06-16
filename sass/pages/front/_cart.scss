@@ -1,0 +1,241 @@
+section.buy-cart{
+  
+  #Buy-cart{
+    
+    //ANIMATION BOTTOM CUBES
+    //CUBE1
+    @keyframes keyframes-buy-cart-bottom-cube-1 {
+      0%{
+        opacity: 0.5;
+      }
+      25%{
+        opacity: 1;
+      }
+      50%{
+        opacity: 0.75;
+      }
+      75%{
+        opacity: 0.25;
+      }
+      100%{
+        opacity: 0.5;
+      }
+    }
+    #Cube1{
+      @include animationName(keyframes-buy-cart-bottom-cube-1);
+      @include animationDuration(6s);
+      @include animationCount(infinite);
+      @include animationDirection(alternate);
+    }
+    //CUBE2
+    @keyframes keyframes-buy-cart-bottom-cube-2 {
+      0%{
+        opacity: 0.75;
+      }
+      25%{
+        opacity: 0.25;
+      }
+      50%{
+        opacity: 0.5;
+      }
+      75%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 0.75;
+      }
+    }
+    #Cube2{
+      @include animationName(keyframes-buy-cart-bottom-cube-2);
+      @include animationDuration(5s);
+      @include animationCount(infinite);
+      @include animationDirection(alternate);
+    }
+    //CUBE3
+    @keyframes keyframes-buy-cart-bottom-cube-3 {
+      0%{
+        opacity: 0.25;
+      }
+      25%{
+        opacity: 0.5;
+      }
+      50%{
+        opacity: 0.75;
+      }
+      75%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 0.25;
+      }
+    }
+    #Cube3{
+      @include animationName(keyframes-buy-cart-bottom-cube-3);
+      @include animationDuration(7s);
+      @include animationCount(infinite);
+      @include animationDirection(alternate);
+    }
+    //CUBE4
+    @keyframes keyframes-buy-cart-bottom-cube-4 {
+      0%{
+        opacity: 1;
+      }
+      25%{
+        opacity: 0.25;
+      }
+      50%{
+        opacity: 0.5;
+      }
+      75%{
+        opacity: 0.25;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+    #Cube4{
+      @include animationName(keyframes-buy-cart-bottom-cube-4);
+      @include animationDuration(6s);
+      @include animationCount(infinite);
+      @include animationDirection(alternate);
+    }
+
+    //ANIMATION PLANKS
+    //PLANK1
+    @keyframes keyframes-buy-cart-plank-1 {
+      0%{
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      15%{
+        -webkit-transform: translate(0, -1px);
+        -moz-transform: translate(0, -1px);
+        -ms-transform: translate(0, -1px);
+        -o-transform: translate(0, -1px);
+        transform: translate(0, -1px);
+        opacity: 0.75;
+      }
+      30%{
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+    #Plank1{
+      @include animationName(keyframes-buy-cart-plank-1);
+      @include animationDuration(2s);
+      @include animationCount(infinite);
+      @include animationPlay(paused);
+    }
+    &:hover #Plank1{
+      @include animationPlay(running);
+    }
+    //PLANK2
+    @keyframes keyframes-buy-cart-plank-2 {
+      10%{
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      25%{
+        -webkit-transform: translate(0, -1px);
+        -moz-transform: translate(0, -1px);
+        -ms-transform: translate(0, -1px);
+        -o-transform: translate(0, -1px);
+        transform: translate(0, -1px);
+        opacity: 0.75;
+      }
+      40%{
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+    #Plank2{
+      @include animationName(keyframes-buy-cart-plank-2);
+      @include animationDuration(2s);
+      @include animationCount(infinite);
+      @include animationPlay(paused);
+    }
+    &:hover #Plank2{
+      @include animationPlay(running);
+    }
+    //PLANK3
+    @keyframes keyframes-buy-cart-plank-3 {
+      20%{
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      35%{
+        -webkit-transform: translate(0, -1px);
+        -moz-transform: translate(0, -1px);
+        -ms-transform: translate(0, -1px);
+        -o-transform: translate(0, -1px);
+        transform: translate(0, -1px);
+        opacity: 0.75;
+      }
+      50%{
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+    #Plank3{
+      @include animationName(keyframes-buy-cart-plank-3);
+      @include animationDuration(2s);
+      @include animationCount(infinite);
+      @include animationPlay(paused);
+    }
+    &:hover #Plank3{
+      @include animationPlay(running);
+    }
+
+    //ANIMATION ARROWS
+    @keyframes keyframes-buy-cart-arrows {
+      from{
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      to{
+        -webkit-transform: translate(8%, 0);
+        -moz-transform: translate(8%, 0);
+        -ms-transform: translate(8%, 0);
+        -o-transform: translate(8%, 0);
+        transform: translate(8%, 0);
+      }
+    }
+    #Arrows{
+      @include animationName(keyframes-buy-cart-arrows);
+      @include animationDuration(2s);
+      @include animationCount(infinite);
+      @include animationPlay(paused);
+      @include animationFunction(linear);
+    }
+    &:hover #Arrows{
+      @include animationPlay(running);
+    }
+  }
+}

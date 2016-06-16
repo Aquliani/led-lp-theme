@@ -1,38 +1,41 @@
 <section class="contacts-earth">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                        <header class="ski-fi-title">
-                            <h2>Contacts</h2>
-                            <hr/>
-                        </header>
-                        <!-- /.ski-fi-title -->
+    <a class="smooth" href="#sectionContacts">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <header class="sci-fi-title">
+                                <h2>Contacts</h2>
+                                <hr/>
+                            </header>
+                            <!-- /.sci-fi-title -->
+                        </div>
+                        <!-- /.col-sm-8 col-sm-offset-2 -->
                     </div>
-                    <!-- /.col-sm-8 col-sm-offset-2 -->
+                    <!-- /.row -->
                 </div>
-                <!-- /.row -->
+                <!-- /.col-sm-12 -->
             </div>
-            <!-- /.col-sm-12 -->
-        </div>
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                        <article>
-                            <img src="<?php bloginfo('template_directory') ?>/src/images/Earth.gif" alt="Earth ski-fi">
-                        </article>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <article>
+                                <img src="<?php bloginfo('template_directory') ?>/src/images/Earth.gif"
+                                     alt="Earth sci-fi">
+                            </article>
+                        </div>
+                        <!-- /.col-sm-8 col-sm-offset-2 -->
                     </div>
-                    <!-- /.col-sm-8 col-sm-offset-2 -->
+                    <!-- /.row -->
                 </div>
-                <!-- /.row -->
+                <!-- /.col-sm-12 -->
             </div>
-            <!-- /.col-sm-12 -->
+            <!-- /.row -->
         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container-fluid -->
+        <!-- /.container-fluid -->
+    </a>
 </section>
 <!-- /.contacts-earth -->

@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <header class="ski-fi-title">
+                <header class="sci-fi-title">
                     <h2>Social</h2>
                     <hr/>
                 </header>
-                <!-- /.ski-fi-title -->
+                <!-- /.sci-fi-title -->
             </div>
             <!-- /.col-sm-12 -->
         </div>

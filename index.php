@@ -23,7 +23,7 @@ get_header(); ?>
                             if (have_posts()) :
                                 if (is_home() && !is_front_page()) : ?>
                                     <div class="row">
-                                        <div class="ski-fi-title">
+                                        <div class="sci-fi-title">
                                             <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
                                             <hr/>
                                         </div>

@@ -1,0 +1,49 @@
+section.contacts {
+  background-image: url('src/images/honeycomb.png');
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba($color5, 0.15);
+
+  .sci-fi-title{
+    background: none;
+  }
+
+  .list-group{
+
+
+    a.list-group-item{
+      background-color: $color9;
+      color: $color5;
+      &:hover{
+        background-color: lighten($color9, 5);
+        .fa{
+          color: lighten($color5, 10);
+        }
+      }
+    }
+
+    h4{
+      margin-top: 25px;
+    }
+    div.fa-parent{
+      @include displayAsTable;
+      width: 100%;
+      i.fa{
+        @include displayAsTableCell;
+        color: $color5;
+      }
+    }
+
+    hr{
+      margin: 0;
+      margin-bottom: 5px;
+      border-color: $color5;
+    }
+    p{
+      font-size: 0.75em;
+    }
+  }
+
+}

@@ -1,8 +1,8 @@
-<section class="about">
-    <div class="container-fluid">
+<section class="about" id="sectionAbout">
+    <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <header class="ski-fi-title">
+            <div class="col-sm-8 col-sm-offset-2">
+                <header class="sci-fi-title">
                     <h1>About us</h1>
                     <hr/>
                 </header>
@@ -11,20 +11,51 @@
         </div>
         <!-- /.row -->
         <div class="row">
-            <div class="col-sm-12">
-                <article class="ski-fi-body">
+            <div class="col-sm-8 col-sm-offset-2">
+                <article>
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-10 col-sm-offset-1">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor dolorem ducimus eveniet ex facere incidunt ipsa iste maiores modi non optio placeat quaerat, qui quis, velit voluptate. A, autem.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt dicta dolores, ea eius eligendi esse eveniet impedit in ipsum iste iure labore libero modi mollitia neque ratione rem sint?
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque laborum porro voluptatem! Cum doloribus eligendi facilis iusto maiores omnis, perferendis quibusdam ratione saepe sapiente. Alias fugit quibusdam veniam voluptatibus?
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aspernatur dolor, eius facilis hic incidunt labore, libero magnam maxime minus molestias nam nesciunt non perspiciatis possimus quibusdam temporibus vitae.
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eius eos et fugit laudantium nobis nostrum qui repellendus totam voluptatibus? Deserunt, explicabo facilis impedit incidunt natus odit totam unde vel.
+                            <div class="col-sm-4 text-center"><i class="fa fa-hand-pointer-o fa-4x"></i></div>
+                            <!-- /.col-sm-4 -->
+                            <div class="col-sm-8">
+                                <h4>Mission</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolore dolorem earum incidunt iusto provident sed veniam! Ab autem commodi eius, molestiae odit perspiciatis quia, quidem repudiandae sunt, voluptates voluptatum!</p>
                             </div>
-                            <!-- /.col-sm-10 col-sm-offset-1 -->
+                            <!-- /.col-sm-8 -->
                         </div>
                         <!-- /.row -->
+                        <div class="row height"></div>
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-push-8 text-center"><i class="fa fa-tasks fa-4x"></i></div>
+                            <!-- /.col-sm-4 -->
+                            <div class="col-sm-8 col-sm-pull-4">
+                                <h4>Tasks</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolore dolorem earum incidunt iusto provident sed veniam! Ab autem commodi eius, molestiae odit perspiciatis quia, quidem repudiandae sunt, voluptates voluptatum!</p>
+                            </div>
+                            <!-- /.col-sm-8 -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="row height"></div>
+                        <div class="row">
+                            <div class="col-sm-4 text-center"><i class="fa fa-leaf fa-4x"></i></div>
+                            <!-- /.col-sm-4 -->
+                            <div class="col-sm-8">
+                                <h4>Life</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolore dolorem earum incidunt iusto provident sed veniam! Ab autem commodi eius, molestiae odit perspiciatis quia, quidem repudiandae sunt, voluptates voluptatum!</p>
+                            </div>
+                            <!-- /.col-sm-8 -->
+                        </div>
+                        <!-- /.row -->
+                        <div class="row height"></div>
+                        <div class="row">
+                            <div class="col-sm-4 col-sm-push-8 text-center"><i class="fa fa-signal fa-4x"></i></div>
+                            <!-- /.col-sm-4 -->
+                            <div class="col-sm-8 col-sm-pull-4">
+                                <h4>Improve</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolore dolorem earum incidunt iusto provident sed veniam! Ab autem commodi eius, molestiae odit perspiciatis quia, quidem repudiandae sunt, voluptates voluptatum!</p>
+                            </div>
+                            <!-- /.col-sm-8 -->
+                        </div>
                     </div>
                     <!-- /.container-fluid -->
                 </article>

@@ -1,5 +1,22 @@
 section.about{
-  .ski-fi-body{
-    padding: 15px;
+  background-color: rgba($color9, 0.9);
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: $color2;
+
+  .sci-fi-title{
+    color: $color2;
+    background: none;
+    hr{
+      border-color: $color2;
+    }
+  }
+
+  i.fa{
+    margin-top: 35px;
+  }
+
+  div.height{
+    height: 50px;
   }
 }

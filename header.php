@@ -30,7 +30,7 @@
     <![endif]-->
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-type="background" data-speed="2">
 
 <header class="page-border page-border-top">
     <div class="container">
