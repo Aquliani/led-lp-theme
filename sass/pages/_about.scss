@@ -12,11 +12,19 @@ section.about{
     }
   }
 
-  i.fa{
-    margin-top: 35px;
+  article{
+    header{
+      @include displayAsTable;
+      height: 80px;
+      width: 100%;
+      h3{
+        @include displayAsTableCell;
+      }
+    }
+
+    .fa{
+      margin-top: 20px;
+    }
   }
 
-  div.height{
-    height: 50px;
-  }
 }

@@ -1,4 +1,9 @@
 section.buy-cart{
+  @media screen and(min-width: $deviceWidth1024) {
+    position: relative;
+    top: 20px;
+  }
+
   
   #Buy-cart{
     

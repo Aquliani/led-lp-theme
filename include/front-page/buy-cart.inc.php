@@ -1,3 +1,6 @@
+<?php
+$title_buy_cart = get_field('title_buy_cart');
+?>
 <section class="buy-cart">
     <a href="#sectionBuy" class="smooth">
         <div class="container-fluid">
@@ -6,7 +9,7 @@
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
                             <header class="sci-fi-title">
-                                <h2>Buy</h2>
+                                <h3><?= $title_buy_cart; ?></h3>
                                 <hr/>
                             </header>
                             <!-- /.sci-fi-title -->

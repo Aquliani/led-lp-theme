@@ -205,4 +205,27 @@ section.social-circle{
     top: 68%;
     right: 34%;
   }
+
+  @media screen and (max-width: $deviceWidth320) {
+    .social-button{
+      width: 20px;
+      height: 20px;
+    }
+
+  }
+  @media screen and (max-width: $deviceWidth480) {
+    .social-button-gp{
+      right: 16%;
+    }
+  }
+  @media screen and (max-width: $deviceWidth640){
+    .social-button-vk{
+      top: 29%;
+      right: 22%;
+    }
+    .social-button-gp{
+      top: 44%;
+      right: 18%;
+    }
+  }
 }

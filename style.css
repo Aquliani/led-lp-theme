@@ -56,6 +56,8 @@ body {
     background-blend-mode: overlay;
     mix-blend-mode: overlay;
     z-index: -1; }
+  body main {
+    background: url("src/images/stars2x.png"); }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: "Courier New", Courier, monospace; }
   body a {
@@ -342,6 +344,7 @@ section.front {
     border-radius: 20px;
     color: #44759f;
     display: table;
+    text-align: center;
     -webkit-transition: box-shadow 1s, background-color 1s, color 1s;
     /* Safari */
     transition: box-shadow 1s, background-color 1s, color 1s; }
@@ -369,16 +372,120 @@ section.front {
     position: absolute;
     top: 68%;
     right: 34%; }
+  @media screen and (max-width: 320px) {
+    section.front section.social-circle .social-button {
+      width: 20px;
+      height: 20px; } }
+  @media screen and (max-width: 480px) {
+    section.front section.social-circle .social-button-gp {
+      right: 16%; } }
+  @media screen and (max-width: 640px) {
+    section.front section.social-circle .social-button-vk {
+      top: 29%;
+      right: 22%; }
+    section.front section.social-circle .social-button-gp {
+      top: 44%;
+      right: 18%; } }
   section.front section.led-lights-logo {
-    position: relative;
-    margin-top: 100px; }
+    position: relative; }
     section.front section.led-lights-logo .logo {
-      position: absolute;
+      position: relative;
       width: 100%; }
     section.front section.led-lights-logo .strokes {
-      position: absolute;
-      top: -50px;
+      position: relative;
+      top: 140px;
       width: 75%; }
+    section.front section.led-lights-logo h4 {
+      font-style: italic;
+      position: absolute;
+      top: 140px;
+      right: 0;
+      width: 30%;
+      text-align: right; }
+@keyframes keyframes-led-lights-logo {
+  0% {
+    fill: #284b77; }
+  15% {
+    fill: #bf40bf; }
+  30% {
+    fill: #bf4040; }
+  45% {
+    fill: #bfbf40; }
+  60% {
+    fill: #40bf40; }
+  75% {
+    fill: #40bfbf; }
+  100% {
+    fill: #283377; } }
+    section.front section.led-lights-logo #LED_bottom #L path, section.front section.led-lights-logo #LED_bottom #E path, section.front section.led-lights-logo #LED_bottom #E rect, section.front section.led-lights-logo #LED_bottom #D path {
+      -webkit-animation-name: keyframes-led-lights-logo;
+      -moz-animation-name: keyframes-led-lights-logo;
+      -o-animation-name: keyframes-led-lights-logo;
+      animation-name: keyframes-led-lights-logo;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-duration: 5s;
+      -moz-animation-duration: 5s;
+      -o-animation-duration: 5s;
+      animation-duration: 5s;
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused; }
+    section.front section.led-lights-logo:hover #LED_bottom #L path, section.front section.led-lights-logo:hover #LED_bottom #E path, section.front section.led-lights-logo:hover #LED_bottom #E rect, section.front section.led-lights-logo:hover #LED_bottom #D path {
+      -webkit-animation-play-state: running;
+      -moz-animation-play-state: running;
+      -o-animation-play-state: running;
+      animation-play-state: running; }
+    @media screen and (max-width: 320px) and (max-height: 480px) {
+      section.front section.led-lights-logo h4 {
+        width: 100%;
+        font-size: small;
+        top: 350px; }
+      section.front section.led-lights-logo .logo {
+        position: relative;
+        top: 82px; } }
+    @media screen and (max-width: 480px) and (max-height: 320px) {
+      section.front section.led-lights-logo h4 {
+        width: 100%;
+        font-size: small;
+        top: 225px; }
+      section.front section.led-lights-logo .strokes {
+        top: 55px; }
+      section.front section.led-lights-logo .logo {
+        position: relative;
+        top: -45px; } }
+    @media screen and (width: 600px) and (height: 800px) {
+      section.front section.led-lights-logo h4 {
+        top: 240px; }
+      section.front section.led-lights-logo .strokes {
+        top: 250px; }
+      section.front section.led-lights-logo .logo {
+        position: relative;
+        top: 120px; } }
+    @media screen and (width: 800px) and (height: 600px) {
+      section.front section.led-lights-logo h4 {
+        font-size: small;
+        top: 175px; }
+      section.front section.led-lights-logo .strokes {
+        top: 190px; }
+      section.front section.led-lights-logo .logo {
+        position: relative;
+        top: 100px; } }
+    @media screen and (width: 1024px) and (height: 768px) {
+      section.front section.led-lights-logo h4 {
+        top: 250px; }
+      section.front section.led-lights-logo .strokes {
+        top: 280px; }
+      section.front section.led-lights-logo .logo {
+        position: relative;
+        top: 160px; } }
+  @media screen and (min-width: 1024px) {
+    section.front section.buy-cart {
+      position: relative;
+      top: 20px; } }
 @keyframes keyframes-buy-cart-bottom-cube-1 {
   0% {
     opacity: 0.5; }
@@ -668,19 +775,153 @@ section.front {
   @media screen and (min-width: 1024px) {
     section.front section.about-frame {
       margin-top: 30px; } }
+  section.front section.about-frame article {
+    position: relative; }
+    section.front section.about-frame article #About-frame {
+      z-index: 10;
+      position: relative; }
+    section.front section.about-frame article video {
+      position: absolute;
+      top: 11%;
+      left: 12%;
+      width: 86%;
+      height: auto;
+      z-index: 1; }
+  section.front section.about-frame .progress {
+    background: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+    height: 10px;
+    margin-top: 3px;
+    margin-bottom: 10px; }
+    section.front section.about-frame .progress .progress-bar-info {
+      background-color: #44759f; }
+@keyframes keyframes-progress-bar-1 {
+  0% {
+    width: 75%; }
+  25% {
+    width: 85%; }
+  50% {
+    width: 75%; }
+  75% {
+    width: 90%; }
+  100% {
+    width: 75%; } }
+  section.front section.about-frame .progress-bar-1 {
+    -webkit-animation-name: keyframes-progress-bar-1;
+    -moz-animation-name: keyframes-progress-bar-1;
+    -o-animation-name: keyframes-progress-bar-1;
+    animation-name: keyframes-progress-bar-1;
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused; }
+  section.front section.about-frame:hover .progress-bar-1 {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running; }
+@keyframes keyframes-progress-bar-2 {
+  0% {
+    width: 75%; }
+  25% {
+    width: 85%; }
+  50% {
+    width: 75%; }
+  75% {
+    width: 95%; }
+  100% {
+    width: 75%; } }
+  section.front section.about-frame .progress-bar-2 {
+    -webkit-animation-name: keyframes-progress-bar-2;
+    -moz-animation-name: keyframes-progress-bar-2;
+    -o-animation-name: keyframes-progress-bar-2;
+    animation-name: keyframes-progress-bar-2;
+    -webkit-animation-duration: 4s;
+    -moz-animation-duration: 4s;
+    -o-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused; }
+  section.front section.about-frame:hover .progress-bar-2 {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running; }
+@keyframes keyframes-progress-bar-3 {
+  0% {
+    width: 90%; }
+  25% {
+    width: 100%; }
+  50% {
+    width: 75%; }
+  75% {
+    width: 80%; }
+  100% {
+    width: 90%; } }
+  section.front section.about-frame .progress-bar-3 {
+    -webkit-animation-name: keyframes-progress-bar-3;
+    -moz-animation-name: keyframes-progress-bar-3;
+    -o-animation-name: keyframes-progress-bar-3;
+    animation-name: keyframes-progress-bar-3;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused; }
+  section.front section.about-frame:hover .progress-bar-3 {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running; }
   @media screen and (min-width: 1024px) {
     section.front section.news-blog-logo {
-      position: absolute;
-      bottom: 55px; }
+      position: relative;
+      top: 7em; }
       section.front section.news-blog-logo .sci-fi-title {
         padding-bottom: 10px; } }
+  section.front section.news-blog-logo article {
+    position: relative;
+    overflow: hidden;
+    height: 30px; }
+    section.front section.news-blog-logo article a {
+      position: absolute;
+      display: inline-block;
+      white-space: nowrap; }
   section.front section.contacts-earth article img {
     width: 100%;
     opacity: 0.9; }
   @media screen and (min-width: 1024px) {
     section.front section.contacts-earth {
       position: relative;
-      top: -70px; } }
+      top: -50px; } }
+  @media screen and (width: 800px) and (height: 600px) {
+    section.front .row-bottom {
+      margin-top: 110px; } }
+  @media screen and (width: 1024px) and (height: 768px) {
+    section.front .row-bottom {
+      margin-top: 200px; } }
 
 header.page-border ul.nav.nav-pills a {
   color: #d5dce6;
@@ -706,17 +947,77 @@ section.contacts {
   border: 1px solid rgba(52, 101, 143, 0.15); }
   section.contacts .sci-fi-title {
     background: none; }
+@keyframes keyframes-contacts-fa-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  10% {
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    transform: rotate(-8deg); }
+  20% {
+    -webkit-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    -ms-transform: rotate(8deg);
+    -o-transform: rotate(8deg);
+    transform: rotate(8deg); }
+  30% {
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    transform: rotate(-8deg); }
+  40% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); } }
   section.contacts .list-group a.list-group-item {
     background-color: #d5dce6;
     color: #34658f; }
+    section.contacts .list-group a.list-group-item .animated {
+      -webkit-animation-name: keyframes-contacts-fa-ring;
+      -moz-animation-name: keyframes-contacts-fa-ring;
+      -o-animation-name: keyframes-contacts-fa-ring;
+      animation-name: keyframes-contacts-fa-ring;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      -o-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused; }
+    section.contacts .list-group a.list-group-item .left-icon {
+      transition: all 0.5s ease-in-out; }
     section.contacts .list-group a.list-group-item:hover {
       background-color: #e5e9f0; }
       section.contacts .list-group a.list-group-item:hover .fa {
         color: #427fb4; }
-  section.contacts .list-group h4 {
-    margin-top: 25px; }
+      section.contacts .list-group a.list-group-item:hover .animated {
+        -webkit-animation-play-state: running;
+        -moz-animation-play-state: running;
+        -o-animation-play-state: running;
+        animation-play-state: running; }
+      section.contacts .list-group a.list-group-item:hover .left-icon {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2); }
   section.contacts .list-group div.fa-parent {
     display: table;
+    text-align: center;
     width: 100%; }
     section.contacts .list-group div.fa-parent i.fa {
       display: table-cell;
@@ -734,8 +1035,39 @@ section.buy {
   padding-top: 40px;
   padding-bottom: 40px;
   margin-bottom: 40px; }
-  section.buy ul li {
-    list-style-type: square; }
+  section.buy #map {
+    width: 100%;
+    height: 400px; }
+  section.buy ul {
+    padding: 0; }
+    section.buy ul li {
+      list-style-type: none;
+      width: 100%;
+      min-height: 50px;
+      -webkit-box-shadow: inset 0 0 20px #44759f;
+      -moz-box-shadow: inset 0 0 20px #44759f;
+      box-shadow: inset 0 0 20px #44759f;
+      margin: 15px 0;
+      padding: 0 5px;
+      cursor: pointer;
+      border: 1px solid #a8d5ef;
+      display: table;
+      text-align: center;
+      -webkit-transition: box-shadow 0.5s;
+      -moz-transition: box-shadow 0.5s;
+      -ms-transition: box-shadow 0.5s;
+      -o-transition: box-shadow 0.5s;
+      transition: box-shadow 0.5s; }
+      section.buy ul li span {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center; }
+      section.buy ul li:hover {
+        -webkit-box-shadow: inset 0 0 5px #44759f, 0 0 15px #44759f;
+        -moz-box-shadow: inset 0 0 5px #44759f, 0 0 15px #44759f;
+        box-shadow: inset 0 0 5px #44759f, 0 0 15px #44759f; }
+  section.buy div.details {
+    display: none; }
 
 section.about {
   background-color: rgba(213, 220, 230, 0.9);
@@ -747,7 +1079,14 @@ section.about {
     background: none; }
     section.about .sci-fi-title hr {
       border-color: #274a75; }
-  section.about i.fa {
-    margin-top: 35px; }
-  section.about div.height {
-    height: 50px; }
+  section.about article header {
+    display: table;
+    text-align: center;
+    height: 80px;
+    width: 100%; }
+    section.about article header h3 {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+  section.about article .fa {
+    margin-top: 20px; }

@@ -37,6 +37,7 @@
 
 @mixin displayAsTable{
   display: table;
+  text-align: center;
 }
 
 @mixin displayAsTableCell{

@@ -17,7 +17,8 @@
 
 <script type="application/javascript" src="<?php bloginfo('template_directory'); ?>/src/js/jquery-2.2.0.min.js"></script>
 <script type="application/javascript" src="<?php bloginfo('template_directory'); ?>/src/js/bootstrap.min.js"></script>
-<script type="application/javascript" src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2YU3QNTV2f1A5ghC_UXC6iCQL4Qj-6f8"></script>
+<script type="application/javascript" src="<?php bloginfo('template_directory'); ?>/src/js/main.min.js"></script>
 
 </body>
 </html>

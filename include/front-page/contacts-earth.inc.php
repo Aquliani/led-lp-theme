@@ -1,3 +1,6 @@
+<?php
+$title_contacts_earth = get_field('title_contacts_earth');
+?>
 <section class="contacts-earth">
     <a class="smooth" href="#sectionContacts">
         <div class="container-fluid">
@@ -6,7 +9,7 @@
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2">
                             <header class="sci-fi-title">
-                                <h2>Contacts</h2>
+                                <h2><?= $title_contacts_earth; ?></h2>
                                 <hr/>
                             </header>
                             <!-- /.sci-fi-title -->

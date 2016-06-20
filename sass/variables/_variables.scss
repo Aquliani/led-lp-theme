@@ -9,7 +9,39 @@ $color8: #1c4577;
 $color9: #d5dce6;
 $color10: #459bd3;
 
+//MEDIA
+$deviceWidth320: 320px;
+$deviceWidth480: 480px;
+$deviceWidth600: 600px;
+$deviceWidth640: 640px;
+$deviceWidth768: 768px;
+$deviceWidth800: 800px;
 $deviceWidth1024: 1024px;
+
+$deviceHeight320: 320px;
+$deviceHeight480: 480px;
+$deviceHeight600: 600px;
+$deviceHeight768: 768px;
+$deviceHeight800: 800px;
+$deviceHeight960: 960px;
+$deviceHeight1024: 1024px;
+
+////MEDIA
+//$deviceWidth320: (320 + 15) + 'px';
+//$deviceWidth480: (480 + 15) + px;
+//$deviceWidth600: (600 + 15) + px;
+//$deviceWidth640: (640 + 15) + px;
+//$deviceWidth768: (768 + 15) + px;
+//$deviceWidth800: (800 + 15) + px;
+//$deviceWidth1024: (1024 + 15) + px;
+//
+//$deviceHeight320: (320 + 15) + px;
+//$deviceHeight480: (480 + 15) + px;
+//$deviceHeight600: (600 + 15) + px;
+//$deviceHeight768: (768 + 15) + px;
+//$deviceHeight800: (800 + 15) + px;
+//$deviceHeight960: (960 + 15) + px;
+//$deviceHeight1024: (1024 + 15) + px;
 
 //HEADER
 $header-height: 35px;

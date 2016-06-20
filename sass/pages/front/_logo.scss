@@ -1,0 +1,122 @@
+section.led-lights-logo{
+  position: relative;
+
+  .logo{
+    position: relative;
+    width: 100%;
+  }
+
+  .strokes{
+    position: relative;
+    top: 140px;
+    width: 75%;
+  }
+  h4{
+    font-style: italic;
+    position: absolute;
+    top: 140px;
+    right: 0;
+    width: 30%;
+    text-align: right;
+  }
+
+  //ANIMATION LED L
+  @keyframes keyframes-led-lights-logo {
+    0%{
+      fill: hsl(213, 50%, 31%);
+    }
+    15%{
+      fill: hsl(300, 50%, 50%);
+    }
+    30%{
+      fill: hsl(360, 50%, 50%);
+    }
+    45%{
+      fill: hsl(60, 50%, 50%);
+    }
+    60%{
+      fill: hsl(120, 50%, 50%);
+    }
+    75%{
+      fill: hsl(180, 50%, 50%);
+    }
+    100%{
+      fill: hsl(231, 50%, 31%);
+    }
+  }
+  #LED_bottom #L path, #LED_bottom #E path, #LED_bottom #E rect, #LED_bottom #D path{
+    @include animationName(keyframes-led-lights-logo);
+    @include animationCount(infinite);
+    @include animationDuration(5s);
+    @include animationPlay(paused);
+  }
+  &:hover #LED_bottom #L path, &:hover #LED_bottom #E path, &:hover #LED_bottom #E rect, &:hover #LED_bottom #D path{
+    @include animationPlay(running);
+  }
+
+  //320 x 480
+  @media screen and (max-width: $deviceWidth320) and (max-height: $deviceHeight480){
+    h4{
+      width: 100%;
+      font-size: small;
+      top: 350px;
+    }
+    .logo{
+      position: relative;
+      top: 82px;
+    }
+  }
+
+  //480 x 320
+  @media screen and (max-width: $deviceWidth480) and (max-height: $deviceHeight320){
+    h4{
+      width: 100%;
+      font-size: small;
+      top: 225px;
+    }
+    .strokes{
+      top: 55px;
+    }
+    .logo{
+      position: relative;
+      top: -45px;
+    }
+  }
+  @media screen and (width: $deviceWidth600) and (height: $deviceHeight800){
+    h4{
+      top: 240px;
+    }
+    .strokes{
+      top: 250px;
+    }
+    .logo{
+      position: relative;
+      top: 120px;
+    }
+  }
+  @media screen and (width: $deviceWidth800) and (height: $deviceHeight600){
+    h4{
+      font-size: small;
+      top: 175px;
+    }
+    .strokes{
+      top: 190px;
+    }
+    .logo{
+      position: relative;
+      top: 100px;
+    }
+  }
+  @media screen and (width: $deviceWidth1024) and (height: $deviceHeight768){
+    h4{
+      top: 250px;
+    }
+    .strokes{
+      top: 280px;
+    }
+    .logo{
+      position: relative;
+      top: 160px;
+    }
+  }
+}

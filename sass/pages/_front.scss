@@ -3,46 +3,32 @@ section.front{
 
   @import "front/social-circle";
 
-  section.led-lights-logo{
-    position: relative;
-    margin-top: 100px;
-
-    .logo{
-      position: absolute;
-      width: 100%;
-    }
-
-    .strokes{
-      position: absolute;
-      top: -50px;
-      width: 75%;
-    }
-  }
+  @import "front/logo";
 
   @import "front/cart";
 
-  section.about-frame{
-
-    ul{
-      li{
-        list-style-type: square;
-        text-transform: uppercase;
-      }
-    }
-
-    @media screen and (min-width: $deviceWidth1024){
-      margin-top: 30px;
-    }
-  }
+  @import "front/about-frame";
 
   section.news-blog-logo{
 
     @media screen and (min-width: $deviceWidth1024){
-      position: absolute;
-      bottom: 55px;
+      position: relative;
+      top: 7em;
 
       .sci-fi-title{
         padding-bottom: 10px;
+      }
+    }
+
+    article{
+      position: relative;
+      overflow: hidden;
+      height: 30px;
+
+      a{
+        position: absolute;
+        display: inline-block;
+        white-space: nowrap;
       }
     }
   }
@@ -56,9 +42,24 @@ section.front{
 
     @media screen and (min-width: $deviceWidth1024) {
       position: relative;
-      top: -70px;
+      top: -50px;
     }
   }
+
+  @media screen and (width: $deviceWidth800) and (height: $deviceHeight600){
+
+    .row-bottom{
+      margin-top: 110px;
+    }
+  }
+
+  @media screen and (width: $deviceWidth1024) and (height: $deviceHeight768){
+
+    .row-bottom{
+      margin-top: 200px;
+    }
+  }
+
 }
 
 

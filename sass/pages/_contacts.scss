@@ -12,21 +12,77 @@ section.contacts {
 
   .list-group{
 
+    //ANIMATION FA ICON
+    @keyframes keyframes-contacts-fa-ring{
+      0%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      10%{
+        -webkit-transform: rotate(-8deg);
+        -moz-transform: rotate(-8deg);
+        -ms-transform: rotate(-8deg);
+        -o-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+      }
+      20%{
+        -webkit-transform: rotate(8deg);
+        -moz-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+        -o-transform: rotate(8deg);
+        transform: rotate(8deg);
+      }
+      30%{
+        -webkit-transform: rotate(-8deg);
+        -moz-transform: rotate(-8deg);
+        -ms-transform: rotate(-8deg);
+        -o-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+      }
+      40%{
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+    }
 
     a.list-group-item{
       background-color: $color9;
       color: $color5;
+
+      .animated{
+        @include animationName(keyframes-contacts-fa-ring);
+        @include animationDuration(1s);
+        @include animationCount(infinite);
+        @include animationPlay(paused);
+      }
+      .left-icon{
+        transition: all 0.5s ease-in-out
+      }
+
       &:hover{
         background-color: lighten($color9, 5);
         .fa{
           color: lighten($color5, 10);
         }
+        .animated{
+          @include animationPlay(running);
+        }
+        .left-icon{
+          -webkit-transform: scale(1.2);
+          -moz-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          -o-transform: scale(1.2);
+          transform: scale(1.2);
+        }
       }
     }
 
-    h4{
-      margin-top: 25px;
-    }
     div.fa-parent{
       @include displayAsTable;
       width: 100%;

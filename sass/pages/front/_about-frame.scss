@@ -1,0 +1,125 @@
+section.about-frame {
+
+  ul {
+    li {
+      list-style-type: square;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: $deviceWidth1024) {
+    margin-top: 30px;
+  }
+
+  article {
+    position: relative;
+
+    #About-frame {
+      z-index: 10;
+      position: relative;
+    }
+    video {
+      position: absolute;
+      top: 11%;
+      left: 12%;
+      width: 86%;
+      height: auto;
+      z-index: 1;
+    }
+  }
+
+  .progress {
+    background: rgba(245, 245, 245, 1);
+    border: 1px solid rgba(245, 245, 245, 1);
+    border-radius: 2px;
+    height: 10px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+
+    .progress-bar-info {
+      background-color: $color4;
+    }
+  }
+
+  //ANIMATION PROGRESS BAR 1
+  @keyframes keyframes-progress-bar-1 {
+    0%{
+      width: 75%;
+    }
+    25%{
+      width: 85%;
+    }
+    50%{
+      width: 75%;
+    }
+    75%{
+      width: 90%;
+    }
+    100%{
+      width: 75%;
+    }
+  }
+  .progress-bar-1{
+    @include animationName(keyframes-progress-bar-1);
+    @include animationDuration(3s);
+    @include animationCount(infinite);
+    @include animationPlay(paused);
+  }
+  &:hover .progress-bar-1{
+    @include animationPlay(running);
+  }
+  //ANIMATION PROGRESS BAR 2
+  @keyframes keyframes-progress-bar-2 {
+    0%{
+      width: 75%;
+    }
+    25%{
+      width: 85%;
+    }
+    50%{
+      width: 75%;
+    }
+    75%{
+      width: 95%;
+    }
+    100%{
+      width: 75%;
+    }
+  }
+  .progress-bar-2{
+    @include animationName(keyframes-progress-bar-2);
+    @include animationDuration(4s);
+    @include animationCount(infinite);
+    @include animationPlay(paused);
+  }
+  &:hover .progress-bar-2{
+    @include animationPlay(running);
+  }
+  //ANIMATION PROGRESS BAR 3
+  @keyframes keyframes-progress-bar-3 {
+    0%{
+      width: 90%;
+    }
+    25%{
+      width: 100%;
+    }
+    50%{
+      width: 75%;
+    }
+    75%{
+      width: 80%;
+    }
+    100%{
+      width: 90%;
+    }
+  }
+  .progress-bar-3{
+    @include animationName(keyframes-progress-bar-3);
+    @include animationDuration(2s);
+    @include animationCount(infinite);
+    @include animationPlay(paused);
+  }
+  &:hover .progress-bar-3{
+    @include animationPlay(running);
+  }
+}
