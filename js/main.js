@@ -29,6 +29,22 @@ $(function () {
         sectionNewsBlogLogo.parent().css('height', sectionNewsBlogLogo.closest('.row').css('height'));
         // play video
         $('section.about-frame').find('video').load();
+
+        // smooth scroll
+        if($window.width() >= 1280){
+            $('a.smooth').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        }
     }else{
         reorderForMobileView();
 
@@ -40,19 +56,7 @@ $(function () {
         }
     }
 
-    // smooth scroll
-    $('a.smooth').click(function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        }
-    });
+
 
     // SOCIAL BUTTON HOVER
     $('.social-button')

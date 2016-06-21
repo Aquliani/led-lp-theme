@@ -48,6 +48,16 @@ body {
       color: white;
     }
   }
+  @media screen and (max-width: $deviceWidth1280) {
+
+    &:after {
+      display: none;
+      background: none;
+    }
+    main{
+      background: none;
+    }
+  }
 }
 
 .sci-fi-title {

@@ -68,6 +68,12 @@ body {
       text-shadow: 0 0 2px rgba(255, 255, 255, 0.35); }
     body a:visited {
       color: white; }
+  @media screen and (max-width: 1280px) {
+    body:after {
+      display: none;
+      background: none; }
+    body main {
+      background: none; } }
 
 .sci-fi-title {
   color: #a8d5ef;
